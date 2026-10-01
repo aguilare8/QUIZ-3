@@ -18,8 +18,10 @@ La curva teórica se escaló con una constante c: teórico(n) = c · log₂(n).
 
 ## Cómo ejecutar (Visual Studio Code)
 
-Primero, se abre una terminal integrada en la carpeta binarySearch. 
+Primero, se abre una terminal integrada en la carpeta binarySearch.
+
 Luego, para compilar escriba en la terminal: g++ -O2 -std=c++17 benchmarkBS.cpp -o benchmarkBS
+
 Por último, para ejecutar escriba (esto va a generar resultadosBS.csv): ./benchmarkBS
 
 ## Resultados
