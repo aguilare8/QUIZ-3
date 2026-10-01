@@ -28,17 +28,25 @@ Por último, para ejecutar escriba: ./benchmarkBS (esto va a generar resultadosB
 
 A continuación, se adjuntan los gráficos con las comparaciones y resultados del benchmark.
 
-### Gráfico 1:
+### Gráfico 1: Tiempo real vs teórico
 
 ![Tiempo real vs teorico](/binarySearch/graficosBS/Grafica%201.jpg)
 
-### Gráfico 2:
+### Gráfico 2: comparaciones vs. log₂(n)
 
-![Tiempo real vs teorico](/binarySearch/graficosBS/Grafica%202.jpg)
+![comparaciones vs. log₂(n)](/binarySearch/graficosBS/Grafica%202.jpg)
 
-### Gráfico 3:
+### Gráfico 3: tiempo vs. log₂(n)
 
-![Tiempo real vs teorico](/binarySearch/graficosBS/Grafica%203.jpg)
+![tiempo vs. log₂(n)](/binarySearch/graficosBS/Grafica%203.jpg)
+
+## Análisis de resultados y conclusiones
+
+El análisis del número de comparaciones confirma que la búsqueda binaria es O(log n). Entre n = 1.000 y n = 50.000.000 (un factor de 50.000 en el tamaño del arreglo) las comparaciones promedio pasaron de 9,5 a 25,2, es decir, apenas unas 16 comparaciones más. Los datos siguen casi exactamente a log₂(n): la diferencia con log₂(n) es de aproximadamente 0,4 comparaciones en todos los tamaños. Cada vez que n se multiplica por 10, el algoritmo hace en promedio unas 3,3 comparaciones adicionales, que es lo que predice la teoría (log₂(10) ≈ 3,32).
+
+El tiempo de ejecución también crece de forma muy lenta en relación con n: aunque el arreglo es 50.000 veces más grande, el tiempo por búsqueda aumentó cerca de 10 veces (de 77 ns a 766 ns), mientras que un algoritmo lineal habría crecido 50.000 veces. Para tamaños de hasta 1.000.000 el tiempo se ajusta bien a una recta contra log₂(n), consistente con O(log n).
+
+Sin embargo, para los arreglos más grandes (n ≥ 5.000.000) el tiempo real se separa de la curva teórica y crece más rápido de lo que predice c·log₂(n). Esta desviación no se debe a que el algoritmo haga más pasos, ya que las comparaciones siguen exactamente la curva logarítmica, sino al hardware. Un arreglo de decenas de millones de enteros ocupa cientos de MB y deja de caber en la memoria caché del procesador, por lo que cada acceso a memoria se vuelve más lento (más fallos de caché). Esta es la explicación más probable, aunque no la verificamos con un perfilador. En resumen, la complejidad algorítmica de la búsqueda binaria es O(log n), como lo demuestra el conteo de comparaciones, mientras que el tiempo medido refleja además el costo de acceso a memoria de la máquina donde se ejecutó.
 
 # 2. Benchmark de MergeSort
 
