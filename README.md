@@ -22,13 +22,17 @@ Primero, se abre una terminal integrada en la carpeta binarySearch.
 
 Luego, para compilar escriba en la terminal: g++ -O2 -std=c++17 benchmarkBS.cpp -o benchmarkBS
 
-Por último, para ejecutar escriba (esto va a generar resultadosBS.csv): ./benchmarkBS
+Por último, para ejecutar escriba: ./benchmarkBS (esto va a generar resultadosBS.csv)
 
 ## Resultados
 
 A continuación, se adjuntan los gráficos con las comparaciones y resultados del benchmark.
 
-(Grafica 1 - tiempo real vs teorico.jpeg)
+![Tiempo real vs teorico](/binarySearch/graficosBS/Grafica%201.jpg)
+
+![Tiempo real vs teorico](/binarySearch/graficosBS/Grafica%202.jpg)
+
+![Tiempo real vs teorico](/binarySearch/graficosBS/Grafica%203.jpg)
 
 # 2. Benchmark de MergeSort
 
