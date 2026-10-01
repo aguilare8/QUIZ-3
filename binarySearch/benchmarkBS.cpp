@@ -1,6 +1,7 @@
 // Benchmark empírico de búsqueda binaria (O(log n))
-// Compilar: g++ -O2 -std=c++17 benchmarkBS.cpp -o benchmark
-// Ejecutar: ./benchmark   (genera resultados.csv)
+// Abra integral integrada en la carpeta binarySearch
+// Para compilar: g++ -O2 -std=c++17 benchmarkBS.cpp -o benchmark
+// Para ejecutar: ./benchmark   (genera resultadosBS.csv)
 
 #include <algorithm>
 #include <chrono>
@@ -34,7 +35,7 @@ int main() {
     const int REPETICIONES = 5;    // veces que se repite cada medición
 
     mt19937 rng(42);  // semilla fija -> resultados reproducibles
-    ofstream csv("resultados.csv");
+    ofstream csv("resultadosBS.csv");
     csv << "n,tiempo_promedio_ns,comparaciones_promedio,log2_n\n";
 
     volatile long long sumidero = 0;  // evita que el compilador elimine las búsquedas
@@ -79,6 +80,6 @@ int main() {
     }
 
     csv.close();
-    cout << "Listo: resultados.csv generado." << endl;
+    cout << "Listo: resultadosBS.csv generado." << endl;
     return 0;
 }
