@@ -1,5 +1,5 @@
 // Benchmark empírico de búsqueda binaria (O(log n))
-// Compilar: g++ -O2 -std=c++17 benchmark.cpp -o benchmark
+// Compilar: g++ -O2 -std=c++17 benchmarkBS.cpp -o benchmark
 // Ejecutar: ./benchmark   (genera resultados.csv)
 
 #include <algorithm>
