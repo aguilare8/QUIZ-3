@@ -1,7 +1,7 @@
 // Benchmark empírico de búsqueda binaria (O(log n))
 // Abra integral integrada en la carpeta binarySearch
-// Para compilar: g++ -O2 -std=c++17 benchmarkBS.cpp -o benchmark
-// Para ejecutar: ./benchmark   (genera resultadosBS.csv)
+// Para compilar: g++ -O2 -std=c++17 benchmarkBS.cpp -o benchmarkBS
+// Para ejecutar: ./benchmarkBS   (genera resultadosBS.csv)
 
 #include <algorithm>
 #include <chrono>
