@@ -28,9 +28,15 @@ Por último, para ejecutar escriba: ./benchmarkBS (esto va a generar resultadosB
 
 A continuación, se adjuntan los gráficos con las comparaciones y resultados del benchmark.
 
+### Gráfico 1:
+
 ![Tiempo real vs teorico](/binarySearch/graficosBS/Grafica%201.jpg)
 
+### Gráfico 2:
+
 ![Tiempo real vs teorico](/binarySearch/graficosBS/Grafica%202.jpg)
+
+### Gráfico 3:
 
 ![Tiempo real vs teorico](/binarySearch/graficosBS/Grafica%203.jpg)
 
