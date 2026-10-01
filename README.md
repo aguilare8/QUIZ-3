@@ -1,3 +1,33 @@
+# 1. Benchmark de Búsqueda Binaria
+
+## Objetivo
+
+El objetivo de esta parte del proyecto es comprobar de forma empírica que el algoritmo de Binary Search presenta una complejidad de tiempo de O(log n), para esto se realizaron múltiples ejecuciones del algoritmo utilizando arreglos de diferentes tamaños y valores aleatorios, midiendo el tiempo de ejecución y comparándolo con el crecimiento teórico log n.
+
+## Metodología
+
+Se generaron arreglos de enteros random y se ordenaron antes de medir (el ordenamiento no entra en el tiempo).
+
+Tamaños de n: 1.000 hasta 50.000.000.
+
+Para cada n se hicieron 200.000 búsquedas con objetivos random (existentes y no existentes) y se repitió la medición 5 veces; se reporta el promedio.
+
+Se midió el tiempo promedio por búsqueda (ns) y el número promedio de comparaciones.
+
+La curva teórica se escaló con una constante c: teórico(n) = c · log₂(n).
+
+## Cómo ejecutar (Visual Studio Code)
+
+Primero, se abre una terminal integrada en la carpeta binarySearch. 
+Luego, para compilar escriba en la terminal: g++ -O2 -std=c++17 benchmarkBS.cpp -o benchmarkBS
+Por último, para ejecutar escriba (esto va a generar resultadosBS.csv): ./benchmarkBS
+
+## Resultados
+
+A continuación, se adjuntan los gráficos con las comparaciones y resultados del benchmark.
+
+(Grafica 1 - tiempo real vs teorico.jpeg)
+
 # 2. Benchmark de MergeSort
 
 ## Objetivo
